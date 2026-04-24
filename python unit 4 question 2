@@ -1,0 +1,19 @@
+[24/04/26, 1:54:51 PM] Om Jadhav: def count_rows(csv_filename):
+try:
+with open(csv_filename,'r', newline=") as file:
+reader= csv.reader(file)
+row_count = sum(1 for row in reader)
+print(f"Total number of rows:{row_count}")
+except FileNotFoundError:
+print("File not found.")
+except Exception as e:
+print(f"An error occurred:{e}")
+# Example usage
+if _name=="_main_":
+count_rows(filename)
+OUTPUT:
+Name,Age
+ABC,20
+XYZ,22
+Total number of rows:3
+[24/04/26, 1:55:06 PM] Om Jadhav: .
